@@ -8,6 +8,16 @@ I am writing this document/code at (roughly!) a million miles an hour. I am tryi
 
 ## Overview
 
+This section will contain the following:
+
+- Process. This section will describe how I typically approach consulting projects. Since this is what you are hiring me for, I feel as though it is important for you to understand my mindset.
+
+- Project. I will describe the (very small!) project that I have time to work on (you do need someone who can code as well as architect/design/work with customers after all!).
+
+- Other factors that I am thinking of (while working on this small project) about some things that I might work on if this were a real-world project.
+
+- Other thoughts I have about this job
+
 ### Process
 
 Having worked for a long time in consulting, I love projects such as this. Having a (mostly) clean slate is awesome when we're trying to figure out how to provide a really wonderful solution for our customers.
@@ -26,4 +36,4 @@ Typically, in a real-world situation, I would follow a more standard consulting 
 - Documentation. As you can see from this document, I believe in very complete documentation of what is being delivered. This must take place in the project.
 - Signoff. I also believe in the customer having the project/product delivered. Then they should test/question it. Finally, they should sign off on the successful completion of the project/product.
 
-# 
+### Project
