@@ -65,7 +65,25 @@ I chose to write this little bit of code in Node/Javascript. It is running in an
 - Performance. This is one of my top 2 favorite items to look at for every project. Not every project needs/requires really tight, crisp performance analysis. But it is important to model, design, and code the application for top-notch performance.
 - Security. This is my first and #1 concern with every project. If it isn't designed, from the start, to be secure - I feel that we have failed the customer. In this porject I am using standard technology for Node. I saw (when compiling the code, that there are a few minor (no major) security warnings. In the real world, this would be step #1, #2, ... #n. It is not really addressed in this toy project.
 
+#### Considerations
 
+The following are some ideas that I immediately had when I read the problem descriptions. Many of them are features that might be good to have in this project (or at least to discuss with the customer, as described in the process above). 
 
+- The customer might (with a GUI) be able to choose among food types (I am interested in Chinese, Mexican today ONLY)
+- The customer has a single address they are at, but they might be moving around (see "range" below)
+- There should be a maximum distance (range) that the customer is willing to go (from their address/location). Only find trucks in that range. I actually added that to the prototype, but I only had time to hardcode the distance.
+- How do we want to get the distance from one location to another. I am using the google distance package. In the real world, that package has a rate limiter on it. Does the customer need to spend $$s for more queries? Is there a better place to get the data?
+- The data file includes some times (of day) that the truck is open. Some don't have that info. How do we want to handle? Do we want to check "now", or allow them to optionally specify the time for the query?
+- I added a range to the prototype. However, the current API uses absolute distance (instead of walking distance). I know that this is in the API - just didn't have the time today. Also, the default it has is in KM. I converted it, but we could either move it to SM (Statute Miles) or to a setting (in a fancy GUI). We also don't want distance as the crow flies, but we want "walking distance". BTW, the "Range" is a maximum that they're willing to walk for their food.
+- How often do we get the data? Is it static? Dynamic? Downloaded at intervals? Can we optimize it offline so that the queries are faster?
+- Do the trucks move? Do we have to be truly dynamic? Can we use their lat/long always? Is it always provided. If not, we MUST have their street address.
+- Add a parser for the street addresses to be a global module. If using a DB, make sure that everything that can be queried is consistent and optimized.
 
+Lat/Long vs. address (optimization)
+
+Google package for 
+
+*** 
 Talk about Next.JS
+
+Talk about VOTE API as the project name and why...
