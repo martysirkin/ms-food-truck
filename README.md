@@ -6,6 +6,18 @@ This file describes the solution that was worked on (morning of 10/15/2018) for 
 
 I am writing this document/code at (roughly!) a million miles an hour. I am trying to complete everything I'm setting out to do in 2 hours or so. Necessarily, there will not be time to complete everything I hope to complete. And I am sure I will forget some steps along the way. In the real world there would be time to review the document and to have others review it. I am sure you will understand if this work product is not 100% complete.
 
+## Contact
+
+This document contains a copyright (which is silly, of course!). However, it is very important, when working with customers for everything you do to be clear and explicit - to avoid any confusion.
+
+Copyright (c) 2018. Marty Sirkin. All Rights Reserved.
+
+If there are any questions about this document/project, I can be contacted at:
+
+Marty Sirkin
+marty@sirkin.net
+(339) 364-1115
+
 ## Overview
 
 This section will contain the following:
