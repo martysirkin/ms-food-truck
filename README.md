@@ -132,3 +132,12 @@ RETURN: If the service fails, a 400 code is returned. Currently, it is not coded
 - The range limit is a valid float
 - There is a max range limit (TBD)
 - Addresses are only considered if they are within a specified range (5 mi?). If not, they are ignored.
+
+## Executing the package
+
+This is a *brief* description of how to use this package. If more information is required, please contact the author (listed above).
+
+1. Download the package from github.
+2. In the main directory, load packages from npm (either npm init or yarn init if you prefer yarn). This is required because the .gitignore does not have us download standard packages (such as express). There's no need to include them on github.
+3. The default port that the server runs on is 3000. If this not preferred, it can be changed in the server.js file.
+4. Execute the API as listed above in the usage section.
