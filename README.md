@@ -8,5 +8,5 @@ Having worked for a long time in consulting, I love projects such as this. Havin
 
 Typically, in a real-world situation, I would follow a more standard consulting process (such as the quick one I am listing here).
 
-1. A
-2. B
+- A
+- B
