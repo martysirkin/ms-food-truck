@@ -1,0 +1,23 @@
+{
+  "name": "voteapi",
+  "version": "0.0.1",
+  "description": "Node APIs for vote project",
+  "main": "server.js",
+  "scripts": {
+    "start": "export NODE_ENV=development || SET NODE_ENV=development && node server/server.js",
+    "test": "mocha \"./{,!(node_modules)/**/}*.test.js\""
+  },
+  "author": "Zindel Investment",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "google-distance": "^1.0.1",
+    "hbs": "^4.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.0"
+  },
+  "devDependencies": {
+    "expect": "^23.6.0",
+    "mocha": "^5.2.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "test" : {
+        "PORT" : 3000,
+        "MONGODB_URI" : "mongodb://marty:00vote00@ds111492.mlab.com:11492/vote-test",
+        "JWT_SECRET": "hjsdknkdsfhdslf7sdfsdfns"
+    },
+    "development" : {
+        "PORT" : 3000,
+        "MONGODB_URI" : "mongodb://marty:00vote00@ds111492.mlab.com:11492/vote-dev",
+        "JWT_SECRET": "iljsfd7sdfnsdfhsdfjsdfhj"
+    }
+}
