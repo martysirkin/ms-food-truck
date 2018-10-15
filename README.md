@@ -8,6 +8,8 @@ I am writing this document/code at (roughly!) a million miles an hour. I am tryi
 
 ## Overview
 
+### Process
+
 Having worked for a long time in consulting, I love projects such as this. Having a (mostly) clean slate is awesome when we're trying to figure out how to provide a really wonderful solution for our customers.
 
 Typically, in a real-world situation, I would follow a more standard consulting process (such as the quick one I am listing here).
@@ -24,3 +26,4 @@ Typically, in a real-world situation, I would follow a more standard consulting 
 - Documentation. As you can see from this document, I believe in very complete documentation of what is being delivered. This must take place in the project.
 - Signoff. I also believe in the customer having the project/product delivered. Then they should test/question it. Finally, they should sign off on the successful completion of the project/product.
 
+# 
