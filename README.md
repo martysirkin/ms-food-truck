@@ -59,11 +59,13 @@ I chose to write this little bit of code in Node/Javascript. It is running in an
 - No matter which testing platform we choose, it is always essential that a full unit/acceptence/system/integration (all depends on the specific project) testing suite be delivered with the package. Again, I started to add this to the solution, but time did not fully permit.
 - Webpack and sccs. Optimization in the compilation is critical. I started to add it to this project. It is not completed (time).
 - Similarly, the project could/should be put in a container, and be deployed in a managed way (Docker/Kubernetes, whatever). Not happening here.
-- GUI. I decided against a GUI for the project. Simply put 
+- GUI. I decided against a GUI for the project. Simply put, this can be fun (and I love doing it), but I am much more concerned, in a full-stack manner, with the project and the data delivery/optimization.
 - A database to hold the truck info might be best for this project. This might be best if the truck information is updated infrequently. Why not optimize the truck locations to improve on query performance?? (We should). But if the truck information is highly dynamic, a different approach might be followed. In this case (because I didn't have much time, I just scraped some of the data and included it in the query. ** THIS IS HIGHLY NON-OPTIMAL AND WOULD NOT BE DONE IN A REAL SYSTEM. ** Why would you transfer that information in the request?? But it is quicker to parse, and I just ran into a couple of bugs while writing the included code. As such, the truck locations are in the input params to the service.
+- I18N. I spent an early part of my career in coding/architecting I18N (Internationalization) toolkits/code for IBM Research. I love the field, and every app should be properly enabled. But that could not possbly happen in this timeframe.
+- Performance. This is one of my top 2 favorite items to look at for every project. Not every project needs/requires really tight, crisp performance analysis. But it is important to model, design, and code the application for top-notch performance.
+- Security. This is my first and #1 concern with every project. If it isn't designed, from the start, to be secure - I feel that we have failed the customer. In this porject I am using standard technology for Node. I saw (when compiling the code, that there are a few minor (no major) security warnings. In the real world, this would be step #1, #2, ... #n. It is not really addressed in this toy project.
 
-### Performance
 
-SECURITY
+
 
 Talk about Next.JS
