@@ -140,4 +140,5 @@ This is a *brief* description of how to use this package. If more information is
 1. Download the package from github.
 2. In the main directory, load packages from npm (either npm init or yarn init if you prefer yarn). This is required because the .gitignore does not have us download standard packages (such as express). There's no need to include them on github.
 3. The default port that the server runs on is 3000. If this not preferred, it can be changed in the server.js file.
-4. Execute the API as listed above in the usage section.
+4. Start the web server. In a command prompt (in the application root directory), type: yarn start
+5. Execute the API as listed above in the usage section.
