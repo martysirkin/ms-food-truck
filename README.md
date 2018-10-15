@@ -36,4 +36,34 @@ Typically, in a real-world situation, I would follow a more standard consulting 
 - Documentation. As you can see from this document, I believe in very complete documentation of what is being delivered. This must take place in the project.
 - Signoff. I also believe in the customer having the project/product delivered. Then they should test/question it. Finally, they should sign off on the successful completion of the project/product.
 
-### Project
+### Food Truck Project
+
+The project you describe is actually an awesome one. It is quite general, allowing me to go into many different possible areas. Unfortunately, time will not permit me to work on many of those. I will list some of the ones that occur to me off the top of my head (in a section below). The reason to include those is to see how I approach problems. Yes, I want to solve the problem that the customer describes. However, often, they either haven't thought the problem through (completely) or are unaware of some of the things that we can do for them. It may well be that we end up just writing what they originally described. But I want to make sure, at the end of the project, that they are truly delighted.
+
+#### Platform
+
+There are many ways that this project can be approached. I prefer to most-often start with the basics. For me, that includes issues such as platform/language/dev ops, for sure. See below for more details.
+
+In this case, I specifically chose to use an environment that is both very common and is new to me. Personally, I believe that we all need to continue to grow and stay up with current trends. As such (outside of applying for this job) I have been getting up to speed on Node/JS, React, and am just about to start working on GraphQL. I am interested in adding all of these to my programming toolkit. My last company (Spoiler Alert) I worked with my team and we chose these platforms (replacing Meteor JS, which we used before) for a rewrite of our platform (which we did in 2017/2018). I am familiar with much of these packages, but I did not have the time to actually dig into the code (my team did). So, I am getting myself up to speed on them.
+
+Note: My most recent company (Spoiler Alert) had services written in Visual C# (most recently replaced with Azure Functions). But I want to know as many different environments as possible, so as to be able to fit the right peg into each hole for the customer.
+
+While this is not the environment I am most proficient in (and thus won't get as much delivered to you today), I feel that this isn't at all different from what may happen when working with customers. They often have old packages that are new to us. They may insist on technologies that I have to get up to speed on. So, why not for this project? I also know that I am not experienced in Node, so this project is likely not to currently have all best practices in it. In the real world, I would take the time to insure that this is covered.
+
+Having said that, I decided to write a simple web server that will digest a simple endpoint for the food truck application. It will be a HTTP POST endpoint (it could easily be a GET, but I realized when I finished that I (for some reason) made this a POST. This is why we design/iterate!!
+
+I chose to write this little bit of code in Node/Javascript. It is running in an EXPRESS web server, running on localhost (see below for details). For most of the projects I work on, there are a number of basic inclusions that I would have that are not in this project. They include:
+
+- Building the application and deploying to a web server automatically. Recently, I've been using Heroku for this
+- Unit testing (and other testing). Most of my projects have used Mocha as a testing platform. For some of the React work I have just started playing with, I have been exploring Jest as a testing platform.
+- No matter which testing platform we choose, it is always essential that a full unit/acceptence/system/integration (all depends on the specific project) testing suite be delivered with the package. Again, I started to add this to the solution, but time did not fully permit.
+- Webpack and sccs. Optimization in the compilation is critical. I started to add it to this project. It is not completed (time).
+- Similarly, the project could/should be put in a container, and be deployed in a managed way (Docker/Kubernetes, whatever). Not happening here.
+- GUI. I decided against a GUI for the project. Simply put 
+- A database to hold the truck info might be best for this project. This might be best if the truck information is updated infrequently. Why not optimize the truck locations to improve on query performance?? (We should). But if the truck information is highly dynamic, a different approach might be followed. In this case (because I didn't have much time, I just scraped some of the data and included it in the query. ** THIS IS HIGHLY NON-OPTIMAL AND WOULD NOT BE DONE IN A REAL SYSTEM. ** Why would you transfer that information in the request?? But it is quicker to parse, and I just ran into a couple of bugs while writing the included code. As such, the truck locations are in the input params to the service.
+
+### Performance
+
+SECURITY
+
+Talk about Next.JS
