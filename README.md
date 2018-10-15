@@ -18,6 +18,50 @@ Marty Sirkin
 marty@sirkin.net
 (339) 364-1115
 
+## IMPORTANT LAST MINUTE NOTE
+
+As I'm sure you're used to, I did a bit too much, and ran out of time. I had what I wanted working and was going to parse the file that you included. As I mention below, I am NOT an expert in this environment yet, so I got a bit caught up. So, at the last minute (to make sure that I could deliver you something), I made the following changes:
+
+1. I modified my input format to include the address of the truck and the name of the truck.
+2. I modified my code so the output shows the name of the truck and where it's at.
+
+This is NOT how I would do a production system, but I suspect you are familiar with this sort of thing in a timed exam (I know I am!)
+
+So, a final sample input is (data from the provided file):
+
+{
+	"trucks" : [
+		{
+			"address" : "599 14th St, San Francisco, CA",
+			"name" : "Pipos Grill"
+		},
+		{
+			"address" : "3598 Mission  St, San Francisco, CA",
+			"name" : "Ziaurehman Amini"
+		},
+		{
+			"address" : "50 Annie St, San Francisco, CA",
+			"name" : "Spice Affairs"
+		},
+		{
+			"address" : "1 Osage Alley, San Francisco, CA",
+			"name" : "Chilifruit"
+		},{
+			"address" : "200 1st Street, San Francisco, CA",
+			"name" : "Halal Cart of San Francisco"
+		}
+	],
+	"myAddress" : "101 Spear Street, San Francisco, CA"
+
+}
+
+Sample output of running it is: 
+
+Trucks →Spice Affairs is located at: 50 Annie St, San Francisco, CA 94105, USA
+Trucks →Halal Cart of San Francisco is located at: 200 1st St, San Francisco, CA 94105, USA
+
+*NOTE* There are only 5 input trucks. Only 2 are in the range. If you change the range (make it bigger), it will show all 5
+
 ## Overview
 
 This section will contain the following:
@@ -112,14 +156,27 @@ BODY: {
        }
 
 Sample body: 
-{
-	"trucks" : [
-		"4 Longfellow Place, Boston, MA",
-		"299 Boylston Street, Boston, MA",
-		"1 Beacon Street, Boston, MA"
-	],
-	"myAddress" : "15 Sudbury Street, Boston, MA"
 
+{
+    "trucks" : [
+        {
+            "address" : "599 14th St, San Francisco, CA",
+            "name" : "Pipos Grill"
+        },
+        {
+            "address" : "3598 Mission  St, San Francisco, CA",
+            "name" : "Ziaurehman Amini"
+        },
+        {
+            "address" : "50 Annie St, San Francisco, CA",
+            "name" : "Spice Affairs"
+        },
+        {
+            "address" : "1 Osage Alley, San Francisco, CA",
+            "name" : "Chilifruit"
+        },{
+            "address" : "200 1st Street, San Francisco, CA",
+            "name" : "Halal Cart of San Francisco"
 }
 
 RETURN: If the service fails, a 400 code is returned. Currently, it is not coded with ANY guards :( Clearly, we should test some very basic conditions, including (note: These are only a few basic ones. With more time, the testing suite would be more complete):
