@@ -83,7 +83,8 @@ The following are some ideas that I immediately had when I read the problem desc
 
 - The customer might (with a GUI) be able to choose among food types (I am interested in Chinese, Mexican today ONLY)
 - The customer has a single address they are at, but they might be moving around (see "range" below)
-- There should be a maximum distance (range) that the customer is willing to go (from their address/location). Only find trucks in that range. I actually added that to the prototype, but I only had time to hardcode the distance.
+- There should be a maximum distance (range) that the customer is willing to go (from their address/location). Only find trucks in that range. I actually added that to the prototype, but I only had time to hardcode the distance. Default is 1 mi.
+- Note: (I am embarrassed about this!) I hardcoded it in my rush to simply parse the "km" from the distances. This is foolish. In the real world I would configure the distance and have it not include units. These are settings I know, but I didn't have time to go find them today.
 - How do we want to get the distance from one location to another. I am using the google distance package. In the real world, that package has a rate limiter on it. Does the customer need to spend $$s for more queries? Is there a better place to get the data?
 - The data file includes some times (of day) that the truck is open. Some don't have that info. How do we want to handle? Do we want to check "now", or allow them to optionally specify the time for the query?
 - I added a range to the prototype. However, the current API uses absolute distance (instead of walking distance). I know that this is in the API - just didn't have the time today. Also, the default it has is in KM. I converted it, but we could either move it to SM (Statute Miles) or to a setting (in a fancy GUI). We also don't want distance as the crow flies, but we want "walking distance". BTW, the "Range" is a maximum that they're willing to for their food.
@@ -96,6 +97,38 @@ The following are some ideas that I immediately had when I read the problem desc
 - NOTE: You'll see that the name of the project (if you look) is VOTEAPI. I took some of the code from a toy project I have worked on this past week about voting (it's in the news after all).
 - NOTE: I have been using POSTMAN to call on the API. Please let me know if you have questions about it or usage of the API.
 
-
-
 ### Usage
+
+This API is very simple to use. It is defined as an HTTP endpoint.
+
+URL:  <server>/findTrucks
+TYPE: POST
+BODY: {
+         "trucks" : [
+            <location of truck1>,
+            <location of truck2>
+         ],
+         "myAddress" : <my address here>
+       }
+
+Sample body: 
+{
+	"trucks" : [
+		"4 Longfellow Place, Boston, MA",
+		"299 Boylston Street, Boston, MA",
+		"1 Beacon Street, Boston, MA"
+	],
+	"myAddress" : "15 Sudbury Street, Boston, MA"
+
+}
+
+RETURN: If the service fails, a 400 code is returned. Currently, it is not coded with ANY guards :( Clearly, we should test some very basic conditions, including (note: These are only a few basic ones. With more time, the testing suite would be more complete):
+
+- There is no "myAddress" argument provided.
+- The myAddress is a valid address
+- Each of the entries in the array for trucks is a string
+- Each address string is a valid address
+- The optional range limit is provided
+- The range limit is a valid float
+- There is a max range limit (TBD)
+- Addresses are only considered if they are within a specified range (5 mi?). If not, they are ignored.
