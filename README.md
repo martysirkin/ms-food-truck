@@ -74,16 +74,16 @@ The following are some ideas that I immediately had when I read the problem desc
 - There should be a maximum distance (range) that the customer is willing to go (from their address/location). Only find trucks in that range. I actually added that to the prototype, but I only had time to hardcode the distance.
 - How do we want to get the distance from one location to another. I am using the google distance package. In the real world, that package has a rate limiter on it. Does the customer need to spend $$s for more queries? Is there a better place to get the data?
 - The data file includes some times (of day) that the truck is open. Some don't have that info. How do we want to handle? Do we want to check "now", or allow them to optionally specify the time for the query?
-- I added a range to the prototype. However, the current API uses absolute distance (instead of walking distance). I know that this is in the API - just didn't have the time today. Also, the default it has is in KM. I converted it, but we could either move it to SM (Statute Miles) or to a setting (in a fancy GUI). We also don't want distance as the crow flies, but we want "walking distance". BTW, the "Range" is a maximum that they're willing to walk for their food.
+- I added a range to the prototype. However, the current API uses absolute distance (instead of walking distance). I know that this is in the API - just didn't have the time today. Also, the default it has is in KM. I converted it, but we could either move it to SM (Statute Miles) or to a setting (in a fancy GUI). We also don't want distance as the crow flies, but we want "walking distance". BTW, the "Range" is a maximum that they're willing to for their food.
 - How often do we get the data? Is it static? Dynamic? Downloaded at intervals? Can we optimize it offline so that the queries are faster?
 - Do the trucks move? Do we have to be truly dynamic? Can we use their lat/long always? Is it always provided. If not, we MUST have their street address.
 - Add a parser for the street addresses to be a global module. If using a DB, make sure that everything that can be queried is consistent and optimized.
+- I downloaded the google distance npm package and installed it on my machine. To run this API you must too. The api KEY is: "AIzaSyAebKraqZ6m5qlx0x6HnoqgHqKhECJmxh0". In the real world I would NEVER include this in the code (as I did for you for simplicity). It would be in a JSON file that is in the .gitignore, so that it isn't shared globally.
+- I added (from another project) the notion of login/logout that I wrote for that project. The users for this are stored in a Mongo DB. HOWEVER, I then decided that *anyone* could access the food trucks. So, the code is in the project, but this API does not actually validate security. It's easy to add, and should be used for uploading data, but it isn't needed for finding trucks (Note: It's a simple SHA256 cipher). 
+- My code uses addresses, not lat/long. It's less efficient (we have to look them up) and it's fine for a prototype. It's also more universal.
+- NOTE: You'll see that the name of the project (if you look) is VOTEAPI. I took some of the code from a toy project I have worked on this past week about voting (it's in the news after all).
+- NOTE: I have been using POSTMAN to call on the API. Please let me know if you have questions about it or usage of the API.
 
-Lat/Long vs. address (optimization)
 
-Google package for 
 
-*** 
-Talk about Next.JS
-
-Talk about VOTE API as the project name and why...
+### Usage
